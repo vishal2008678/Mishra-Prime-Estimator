@@ -13,9 +13,7 @@ The **Mishra Prime Estimator** is a novel mathematical formula designed to predi
 
 ## 🧮 Core Formula
 
-\[
-P_n ≈ 1.165·n·\log(n) − 0.18·\log(n) + \frac{n}{4.2·\log(n)} − 0.62·\sin(1.39·n) + \Re\left(0.5·e^{i·n·\pi/4} + 0.35·e^{i·n·\pi/6}\right)
-\]
+Pn ≈ 1.165·n·log(n) − 0.18·log(n) + (n / (4.2·log(n))) − 0.62·sin(1.39·n) + Re[0.5·e^(inπ/4) + 0.35·e^(inπ/6)]
 
 Where:
 - \(n\) is the prime index
