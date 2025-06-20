@@ -1,47 +1,38 @@
 # Mishra Prime Estimator
 
-### 📌 Author: Divya Prakash Mishra  
-### 🔢 Project: Predicting Prime Numbers with Enhanced Accuracy  
+An analytical formula to estimate the **nth prime number**, created by Divya Prakash Mishra.  
+The estimator uses a blend of logarithmic, trigonometric, and complex corrections to improve prediction accuracy over classical methods.
+
+## 📘 About the Researcher
+
+**Divya Prakash Mishra**  
+🔗 [ORCID iD](https://orcid.org/0009-0004-4710-9342)  
+📄 [Zenodo Preprint: The Mishra Prime Estimator](https://zenodo.org/records/15673984)  
+🎓 Independent researcher passionate about prime numbers, estimation models, and theoretical number theory.
+
+## 📊 Formula Overview
+
+Pn ≈ 1.165·n·log(n) − 0.18·log(n) + (n / 4.2·log(n)) − 0.62·sin(1.39·n) + ℜ(0.5·e^{inπ/4} + 0.35·e^{inπ/6})
+
+
+
+## 🧪 Technologies Used
+
+- Python
+- NumPy
+- Matplotlib
+- LaTeX (for rendering formula)
+- Markdown / GitHub Pages
+
+## 📈 Graphical Comparison
+
+The estimator has been visually compared against known prime number sequences and classical approximations like `n log n`.
+
+## 🌐 Links
+
+- [Official Paper on Zenodo](https://zenodo.org/records/15673984)
+- [GitHub Repository](https://github.com/vishal2008678/Mishra-Prime-Estimator)
+- [ORCID Profile](https://orcid.org/0009-0004-4710-9342)
 
 ---
 
-## 🧠 Overview
-
-The **Mishra Prime Estimator** is a novel mathematical formula designed to predict the *(n)ᵗʰ prime number* using a blend of logarithmic components, sinusoidal correction, and complex oscillations. It provides high accuracy compared to traditional approximations and opens new directions for prime number analysis—potentially relevant to the **Riemann Hypothesis**.
-
----
-
-## 🧮 Core Formula
-
-Pn ≈ 1.165·n·log(n) − 0.18·log(n) + (n / (4.2·log(n))) − 0.62·sin(1.39·n) + Re[0.5·e^(inπ/4) + 0.35·e^(inπ/6)]
-
-Where:
-- \(n\) is the prime index
-- \(\Re\) denotes the real part of a complex number
-- \(P_n\) is the predicted \(n\)th prime
-
----
-
-## 📊 Features
-
-- High accuracy for predicting \(P_n\)
-- Complex oscillations reflect deeper prime structure
-- Error modeling and correction functions included
-- Python implementation for direct use
-
----
-
-## 🐍 Python Implementation
-
-```python
-import math
-import cmath
-
-def mishra_prime_estimator(n):
-    logn = math.log(n)
-    term1 = 1.165 * n * logn
-    term2 = -0.18 * logn
-    term3 = n / (4.2 * logn)
-    term4 = -0.62 * math.sin(1.39 * n)
-    term5 = cmath.exp(1j * n * math.pi / 4) * 0.5 + cmath.exp(1j * n * math.pi / 6) * 0.35
-    return round(term1 + term2 + term3 + term4 + term5.real)
